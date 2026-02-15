@@ -41,19 +41,20 @@ showPlaylists();
 const form = document.getElementById("playlist-form");
 const input = document.getElementById("playlist-name");
 
-// Listen for form submission
+// Run this function when the form is submitted
 form.addEventListener("submit", function (event) {
+  // Prevent page reload when the form is submitted
   event.preventDefault();
   const name = input.value.trim();
-
+  // Stop if input is empty
   if (name === "") return;
-
+  // Add new playlist object to array
   playlists.push({
     id: name.toLowerCase().replaceAll(" ", "-"),
     name: name,
     tracks: [],
   });
-
+  // Clear input field
   input.value = "";
 
   showPlaylists();
