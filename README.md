@@ -17,10 +17,13 @@ The layout is built with Flexbox and has red background
 
 ## Project Structure
 
+```bash
 music-playlist/
 ├── index.html
 ├── style.css
 └── script.js
+```
+
 
 ## How to Run
 
