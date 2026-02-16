@@ -1,6 +1,118 @@
-h1,
-h2,
-h3,
-h4 {
-  text-align: center;
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background: #e63946;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 40px 20px;
+  color: #222;
+}
+
+/* Title */
+h1 {
+  margin-bottom: 25px;
+  font-weight: 600;
+  color: white;
+}
+
+/* Containers */
+#playlist-form,
+#playlist-container,
+#playlist-details {
+  width: 500px;
+  max-width: 100%;
+
+  background: #ffffff;
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin-bottom: 20px;
+
+  border-radius: 8px;
+}
+
+/* Form layout */
+#playlist-form {
+  display: flex;
+  gap: 10px;
+}
+
+/* Input */
+#playlist-name {
+  flex: 1;
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+
+  border-radius: 6px;
+}
+
+#playlist-name:focus {
+  border-color: #e63946;
+  outline: none;
+}
+
+/* Button */
+button {
+  padding: 8px 14px;
+  border: 1px solid #e63946;
+  background: #e63946;
+  color: white;
+  cursor: pointer;
+
+  border-radius: 6px;
+}
+
+button:hover {
+  background: #c1121f;
+}
+
+/* Playlist rows */
+#playlist-container div {
+  padding: 8px 10px;
+  cursor: pointer;
+  border-bottom: 1px solid #eee;
+
+  border-radius: 4px;
+}
+
+#playlist-container div:hover {
+  background: #f8d7da;
+}
+
+/* Hide empty details box */
+#playlist-details:empty {
+  display: none;
+}
+
+/* Details styling */
+#playlist-details h2 {
+  margin-top: 0;
+  font-size: 18px;
+}
+
+#playlist-details h3 {
+  margin: 12px 0 5px;
+  font-size: 14px;
+  color: #e63946;
+}
+
+#playlist-details h4 {
+  margin: 8px 0 3px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+#playlist-details p {
+  margin: 2px 0;
+  padding-left: 10px;
+  font-size: 13px;
+  color: #555;
 }
